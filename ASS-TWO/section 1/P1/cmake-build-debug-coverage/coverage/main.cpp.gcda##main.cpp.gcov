@@ -1,0 +1,246 @@
+        -:    0:Source:F:/Koleya/College/Data Strucrure/main.cpp
+        -:    0:Graph:F:\Koleya\College\Data Strucrure\cmake-build-debug-coverage\CMakeFiles\Data_Strucrure.dir\main.cpp.gcno
+        -:    0:Data:F:\Koleya\College\Data Strucrure\cmake-build-debug-coverage\CMakeFiles\Data_Strucrure.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <iostream>
+        -:    2:#include <ctime>
+        -:    3:#include <conio.h>
+        -:    4:#include <stdio.h>
+        -:    5:#include <cstdlib>
+        -:    6:#define MAX 100000
+        -:    7:using namespace std;
+        -:    8:// This is for merge sorting
+        -:    9:void merge(int *, int, int, int);
+        -:   10:
+function _Z9mergesortPiii called 199999 returned 100% blocks executed 100%
+   199999:   11:void mergesort(int *a, int low, int high)
+        -:   12:{
+        -:   13:    int mid;
+   199999:   14:    if (low < high)
+   199999:   14-block  0
+branch  0 taken 99999 (fallthrough)
+branch  1 taken 100000
+        -:   15:    {
+    99999:   16:        mid = (low + high) / 2;
+    99999:   17:        mergesort(a, low, mid);
+    99999:   17-block  0
+call    0 returned 99999
+    99999:   18:        mergesort(a, mid + 1, high);
+call    0 returned 99999
+    99999:   19:        merge(a, low, high, mid);
+call    0 returned 99999
+        -:   20:    }
+   199999:   21:    return;
+   199999:   21-block  0
+        -:   22:}
+        -:   23:
+function _Z5mergePiiii called 99999 returned 100% blocks executed 87%
+    99999:   24:void merge(int *a, int low, int high, int mid)
+        -:   25:{
+        -:   26:    int i, j, k;
+        -:   27:    int c[100000];
+    99999:   28:    i = low;
+    99999:   29:    k = low;
+    99999:   30:    j = mid + 1;
+    99999:   30-block  0
+   953903:   31:    while (i <= mid && j <= high)
+   953903:   31-block  0
+branch  0 taken 853904 (fallthrough)
+branch  1 taken 99999
+   853904:   31-block  1
+branch  2 taken 853904 (fallthrough)
+branch  3 taken 0
+   853904:   31-block  2
+        -:   32:    {
+   853904:   33:        if (a[i] < a[j])
+   853904:   33-block  0
+branch  0 taken 853904 (fallthrough)
+branch  1 taken 0
+        -:   34:        {
+   853904:   35:            c[k] = a[i];
+   853904:   36:            k++;
+   853904:   37:            i++;
+   853904:   37-block  0
+        -:   38:        }
+        -:   39:        else
+        -:   40:        {
+    #####:   41:            c[k] = a[j];
+    #####:   42:            k++;
+    #####:   43:            j++;
+    %%%%%:   43-block  0
+        -:   44:        }
+        -:   45:    }
+   99999*:   46:    while (i <= mid)
+    99999:   46-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 99999
+        -:   47:    {
+    #####:   48:        c[k] = a[i];
+    #####:   49:        k++;
+    #####:   50:        i++;
+    %%%%%:   50-block  0
+        -:   51:    }
+   915023:   52:    while (j <= high)
+   915023:   52-block  0
+branch  0 taken 815024 (fallthrough)
+branch  1 taken 99999
+        -:   53:    {
+   815024:   54:        c[k] = a[j];
+   815024:   55:        k++;
+   815024:   56:        j++;
+   815024:   56-block  0
+        -:   57:    }
+  1768927:   58:    for (i = low; i < k; i++)
+    99999:   58-block  0
+  1768927:   58-block  1
+branch  0 taken 1668928 (fallthrough)
+branch  1 taken 99999
+        -:   59:    {
+  1668928:   60:        a[i] = c[i];
+  1668928:   60-block  0
+        -:   61:    }
+    99999:   62:}
+        -:   63://this is for quick sorting
+function _Z13RandomShufflePi called 1 returned 100% blocks executed 100%
+        1:   64:void RandomShuffle(int arr[])
+        -:   65:{
+        1:   66:    srand(time(NULL));
+        1:   66-block  0
+call    0 returned 1
+call    1 returned 1
+        -:   67:    int i, j, temp;
+   100000:   68:    for (i = MAX - 1; i > 0; i--)
+   100000:   68-block  0
+branch  0 taken 99999 (fallthrough)
+branch  1 taken 1
+        -:   69:    {
+    99999:   70:        j = rand()%(i + 1);
+    99999:   70-block  0
+call    0 returned 99999
+    99999:   71:        temp = arr[i];
+    99999:   72:        arr[i] = arr[j];
+    99999:   73:        arr[j] = temp;
+        -:   74:    }
+        1:   75:}
+function _Z4SwapPiS_ called 1200936 returned 100% blocks executed 100%
+  1200936:   76:void Swap(int *x, int *y)
+        -:   77:{
+        -:   78:    int temp;
+  1200936:   79:    temp = *x;
+  1200936:   80:    *x = *y;
+  1200936:   81:    *y = temp;
+  1200936:   82:}
+function _Z9PartitionPiii called 66740 returned 100% blocks executed 100%
+    66740:   83:int Partition(int a[], int beg, int end)
+        -:   84:{
+        -:   85:
+    66740:   86:    int pivotIndex = beg + rand()%(end - beg + 1); //generates a random number as a pivot
+    66740:   86-block  0
+call    0 returned 66740
+        -:   87:    int pivot;
+    66740:   88:    int i = beg - 1;
+        -:   89:    int j;
+    66740:   90:    pivot = a[pivotIndex];
+    66740:   91:    Swap(&a[pivotIndex], &a[end]);
+call    0 returned 66740
+  2068748:   92:    for (j = beg; j < end; j++)
+  2068748:   92-block  0
+branch  0 taken 2002008 (fallthrough)
+branch  1 taken 66740
+  2002008:   92-block  1
+        -:   93:    {
+  2002008:   94:        if (a[j] < pivot)
+  2002008:   94-block  0
+branch  0 taken 1067456 (fallthrough)
+branch  1 taken 934552
+        -:   95:        {
+  1067456:   96:            i++;
+  1067456:   97:            Swap(&a[i], &a[j]);
+  1067456:   97-block  0
+call    0 returned 1067456
+        -:   98:        }
+        -:   99:
+        -:  100:    }
+    66740:  101:    Swap(&a[i+1], &a[end]);
+    66740:  101-block  0
+call    0 returned 66740
+    66740:  102:    return i + 1;
+        -:  103:}
+        -:  104:
+        -:  105:
+function _Z9QuickSortPiii called 133481 returned 100% blocks executed 100%
+   133481:  106:void QuickSort(int arr[], int start, int End)
+        -:  107:{
+        -:  108:    int j;
+   133481:  109:    if (start < End)
+   133481:  109-block  0
+branch  0 taken 66740 (fallthrough)
+branch  1 taken 66741
+        -:  110:    {
+    66740:  111:        j = Partition(arr, start, End);
+    66740:  111-block  0
+call    0 returned 66740
+    66740:  112:       QuickSort(arr,start, j-1);
+call    0 returned 66740
+    66740:  113:       QuickSort(arr, j+1, End);
+call    0 returned 66740
+        -:  114:    }
+   133481:  115:}
+        -:  116:
+function main called 1 returned 0% blocks executed 86%
+        1:  117:int main() {
+        -:  118:
+        -:  119:    int i;
+        -:  120:    int j;
+        -:  121:    int arr[MAX];
+   100001:  122:    for (i = 0; i < MAX; i++)
+        1:  122-block  0
+   100001:  122-block  1
+branch  0 taken 100000 (fallthrough)
+branch  1 taken 1
+   100000:  123:        arr[i] = i;
+   100000:  123-block  0
+        1:  124:    RandomShuffle(arr); //To randomize the array
+        1:  124-block  0
+call    0 returned 1
+        1:  125:    QuickSort(arr, 0, MAX-1);//The quick sorting
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  126:
+        1:  127:    mergesort(arr, 0, MAX-1 );
+        1:  127-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+   100001:  128:    for (j = 0; j < MAX; j++)
+        1:  128-block  0
+   100001:  128-block  1
+branch  0 taken 100000 (fallthrough)
+branch  1 taken 1
+   100000:  128-block  2
+   100000:  129:        printf("%d \n", arr[j]);
+   100000:  129-block  0
+call    0 returned 100000
+branch  1 taken 100000 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  130:    getch();
+        1:  130-block  0
+call    0 returned 0
+branch  1 taken 0 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  131:    /*
+        -:  132:    srand(time(NULL));
+        -:  133:    const unsigned int sizeOfarray=100000;
+        -:  134:    int numberArray[sizeOfarray];
+        -:  135:    for(int i=0; i<sizeOfarray; i++)
+        -:  136:    {
+        -:  137:        numberArray[i]= rand()%50;
+        -:  138:        cout<< numberArray[i]<<endl;
+        -:  139:    }
+        -:  140:*/
+        -:  141:
+    #####:  142:    return 0;
+    %%%%%:  142-block  0
+        -:  143:}

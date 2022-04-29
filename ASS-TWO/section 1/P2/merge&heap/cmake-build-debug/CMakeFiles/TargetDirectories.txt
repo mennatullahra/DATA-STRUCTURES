@@ -1,0 +1,3 @@
+C:/Users/abdel/CLionProjects/merge&heap/cmake-build-debug/CMakeFiles/merge_heap.dir
+C:/Users/abdel/CLionProjects/merge&heap/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/abdel/CLionProjects/merge&heap/cmake-build-debug/CMakeFiles/rebuild_cache.dir

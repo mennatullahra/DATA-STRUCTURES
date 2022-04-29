@@ -1,0 +1,3 @@
+F:/Koleya/College/Data Strucrure/P1/cmake-build-debug/CMakeFiles/Data_Strucrure.dir
+F:/Koleya/College/Data Strucrure/P1/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/Koleya/College/Data Strucrure/P1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

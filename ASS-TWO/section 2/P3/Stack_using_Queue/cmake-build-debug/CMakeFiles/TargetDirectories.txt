@@ -1,0 +1,3 @@
+C:/Users/abdel/CLionProjects/Stack_using_Queue/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/abdel/CLionProjects/Stack_using_Queue/cmake-build-debug/CMakeFiles/Queue.dir
+C:/Users/abdel/CLionProjects/Stack_using_Queue/cmake-build-debug/CMakeFiles/rebuild_cache.dir
